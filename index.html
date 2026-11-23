@@ -1,23 +1,170 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Labs Starter</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find IT startup jobs, explore open roles and discover companies hiring on Job Board.">
+  <title>Job Board | Home</title>
 </head>
 <body>
-  <header class="u-header">
-    <nav class="u-nav">
-      <a href="#" class="u-logo">MySite</a>
-      <ul class="u-menu">
-        <li><a href="#/home">Home</a></li>
-        <li><a href="#/list">List</a></li>
-        <li><a href="#/about">About</a></li>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="site-nav__logo" href="./index.html" aria-label="Job Board home">Job Board</a>
+      <ul class="site-nav__list">
+        <li class="site-nav__item"><a href="./index.html" aria-current="page">Home</a></li>
+        <li class="site-nav__item"><a href="#latest-jobs">Jobs</a></li>
+        <li class="site-nav__item"><a href="#startups-hiring">Companies</a></li>
       </ul>
     </nav>
   </header>
-  <main id="app"></main>
-  <footer class="u-footer">© 2025</footer>
-  <script type="module" src="/src/js/main.js"></script>
+
+  <main class="home" id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <h1 class="hero__title" id="hero-title">Find your next job at an IT startup</h1>
+        <p class="hero__description">
+          Discover roles at IT startups. Find your next opportunity in design,
+          engineering, and product.
+        </p>
+        <form class="hero__search" action="./index.html#latest-jobs" method="get" role="search">
+          <label class="hero__label" for="job-keyword">Job title or keyword</label>
+          <input class="hero__input" id="job-keyword" name="q" type="search"
+                 placeholder="Search jobs">
+          <button class="hero__button" type="submit">Start searching</button>
+        </form>
+      </div>
+      <picture class="hero__picture">
+        <source type="image/webp"
+                srcset="./images/illustration-446.webp 446w, ./images/illustration-892.webp 892w"
+                sizes="(max-width: 768px) 100vw, 446px">
+        <img class="hero__image"
+             src="./images/illustration-446.webp"
+             srcset="./images/illustration-446.webp 446w, ./images/illustration-892.webp 892w"
+             sizes="(max-width: 768px) 100vw, 446px"
+             width="446" height="346"
+             alt="Person working on a laptop at a desk">
+      </picture>
+    </section>
+
+    <section class="categories" id="categories" aria-labelledby="categories-title">
+      <header class="section-heading">
+        <h2 class="section-heading__title" id="categories-title">Popular category</h2>
+        <a class="section-heading__link" href="#latest-jobs">View All</a>
+      </header>
+      <ul class="categories__list">
+        <li class="categories__item"><a href="#latest-jobs">Music &amp; Audio</a><span>350 Open positions</span></li>
+        <li class="categories__item"><a href="#latest-jobs">Finance</a><span>170 Open positions</span></li>
+        <li class="categories__item"><a href="#latest-jobs">Data Science</a><span>57 Open positions</span></li>
+        <li class="categories__item"><a href="#latest-jobs">Social</a><span>112 Open positions</span></li>
+        <li class="categories__item"><a href="#latest-jobs">Design</a><span>357 Open positions</span></li>
+        <li class="categories__item"><a href="#latest-jobs">Programming</a><span>312 Open positions</span></li>
+        <li class="categories__item"><a href="#latest-jobs">Marketing</a><span>112 Open positions</span></li>
+        <li class="categories__item"><a href="#latest-jobs">Animation</a><span>101 Open positions</span></li>
+      </ul>
+    </section>
+
+    <aside class="job-banner" aria-labelledby="job-banner-title">
+      <h2 class="job-banner__title" id="job-banner-title">Looking for a job in a startup?</h2>
+      <p class="job-banner__description">Apply for a job in 5 minutes and reach the IT realms.</p>
+      <a class="job-banner__link" href="#latest-jobs">Find job</a>
+    </aside>
+
+    <section class="latest-jobs" id="latest-jobs" aria-labelledby="latest-jobs-title">
+      <header class="section-heading">
+        <h2 class="section-heading__title" id="latest-jobs-title">Latest jobs</h2>
+        <a class="section-heading__link" href="#latest-jobs">View All</a>
+      </header>
+      <div class="latest-jobs__list">
+        <article class="job-card" aria-labelledby="job-1-title">
+          <p class="job-card__company">PixelNest</p>
+          <h3 class="job-card__title" id="job-1-title">Junior Graphic Designer</h3>
+          <ul class="job-card__tags"><li>Remote</li><li>Internship</li><li>Junior</li></ul>
+          <p class="job-card__salary">$20,000–$25,000</p>
+        </article>
+        <article class="job-card" aria-labelledby="job-2-title">
+          <p class="job-card__company">TestPilot</p>
+          <h3 class="job-card__title" id="job-2-title">Frontend Developer</h3>
+          <ul class="job-card__tags"><li>Kyiv, Ukraine</li><li>Full-time</li><li>Middle</li></ul>
+          <p class="job-card__salary">$55,000–$75,000</p>
+        </article>
+        <article class="job-card" aria-labelledby="job-3-title">
+          <p class="job-card__company">FlowForge</p>
+          <h3 class="job-card__title" id="job-3-title">QA Engineer</h3>
+          <ul class="job-card__tags"><li>Remote</li><li>Full-time</li><li>Junior</li></ul>
+          <p class="job-card__salary">$35,000–$50,000</p>
+        </article>
+        <article class="job-card" aria-labelledby="job-4-title">
+          <p class="job-card__company">CloudSprout</p>
+          <h3 class="job-card__title" id="job-4-title">Backend Developer</h3>
+          <ul class="job-card__tags"><li>Warsaw, Poland</li><li>Full-time</li><li>Middle</li></ul>
+          <p class="job-card__salary">$60,000–$85,000</p>
+        </article>
+        <article class="job-card" aria-labelledby="job-5-title">
+          <p class="job-card__company">EPAM Systems</p>
+          <h3 class="job-card__title" id="job-5-title">Product Designer</h3>
+          <ul class="job-card__tags"><li>Remote</li><li>Contract</li><li>Middle</li></ul>
+          <p class="job-card__salary">$50,000–$70,000</p>
+        </article>
+        <article class="job-card" aria-labelledby="job-6-title">
+          <p class="job-card__company">MetricBloom</p>
+          <h3 class="job-card__title" id="job-6-title">Junior UI Designer</h3>
+          <ul class="job-card__tags"><li>Berlin, Germany</li><li>Full-time</li><li>Junior</li></ul>
+          <p class="job-card__salary">$30,000–$42,000</p>
+        </article>
+        <article class="job-card" aria-labelledby="job-7-title">
+          <p class="job-card__company">LaunchLeaf</p>
+          <h3 class="job-card__title" id="job-7-title">Data Analyst</h3>
+          <ul class="job-card__tags"><li>Remote</li><li>Part-time</li><li>Junior</li></ul>
+          <p class="job-card__salary">$25,000–$35,000</p>
+        </article>
+        <article class="job-card" aria-labelledby="job-8-title">
+          <p class="job-card__company">StackHarbor</p>
+          <h3 class="job-card__title" id="job-8-title">Marketing Intern</h3>
+          <ul class="job-card__tags"><li>Tallinn, Estonia</li><li>Internship</li><li>Junior</li></ul>
+          <p class="job-card__salary">$18,000–$24,000</p>
+        </article>
+        <article class="job-card" aria-labelledby="job-9-title">
+          <p class="job-card__company">BrightStack</p>
+          <h3 class="job-card__title" id="job-9-title">DevOps Engineer</h3>
+          <ul class="job-card__tags"><li>Remote</li><li>Full-time</li><li>Senior</li></ul>
+          <p class="job-card__salary">$70,000–$95,000</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="startups" id="startups-hiring" aria-labelledby="startups-title">
+      <header class="section-heading">
+        <h2 class="section-heading__title" id="startups-title">Startups hiring</h2>
+        <a class="section-heading__link" href="#startups-hiring">View All</a>
+      </header>
+      <ul class="startups__list">
+        <li class="startups__item"><article><h3>PixelNest</h3><p>12 Open positions</p></article></li>
+        <li class="startups__item"><article><h3>CloudSprout</h3><p>9 Open positions</p></article></li>
+        <li class="startups__item"><article><h3>FlowForge</h3><p>6 Open positions</p></article></li>
+        <li class="startups__item"><article><h3>StackHarbor</h3><p>4 Open positions</p></article></li>
+        <li class="startups__item"><article><h3>BrightStack</h3><p>8 Open positions</p></article></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <section class="site-footer__about" aria-labelledby="footer-title">
+      <h2 class="site-footer__title" id="footer-title">Job Board</h2>
+      <p>The job board for IT startups. Find roles in product teams that move fast.</p>
+    </section>
+    <nav class="site-footer__nav" aria-label="Footer navigation">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#latest-jobs">Jobs</a></li>
+        <li><a href="#startups-hiring">Companies</a></li>
+      </ul>
+    </nav>
+    <section class="site-footer__info" aria-labelledby="footer-info-title">
+      <h2 id="footer-info-title">Find us</h2>
+      <p><small>Educational project: demonstration listings.</small></p>
+    </section>
+  </footer>
 </body>
 </html>
