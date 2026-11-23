@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse open IT startup jobs and explore opportunities by category, work type and experience level.">
+  <title>Job Board | Jobs</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="site-nav__logo" href="./index.html" aria-label="Job Board home">Job Board</a>
+      <ul class="site-nav__list">
+        <li class="site-nav__item"><a href="./index.html">Home</a></li>
+        <li class="site-nav__item"><a href="./jobs.html" aria-current="page">Jobs</a></li>
+        <li class="site-nav__item"><a href="./index.html#startups-hiring">Companies</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="jobs" id="main-content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="./index.html">Home</a></li>
+        <li class="breadcrumbs__item" aria-current="page">Jobs Catalog</li>
+      </ol>
+    </nav>
+
+    <header class="jobs__header">
+      <h1 class="jobs__title">Jobs</h1>
+    </header>
+
+    <div class="jobs__layout">
+      <aside class="job-filters" aria-labelledby="job-filters-title">
+        <h2 class="job-filters__title" id="job-filters-title">Filters</h2>
+
+        <form class="job-filters__form" aria-label="Job filters">
+          <fieldset class="job-filters__group">
+            <legend class="job-filters__legend">Category</legend>
+            <label class="job-filters__option"><input type="checkbox" name="category" value="frontend"> Frontend</label>
+            <label class="job-filters__option"><input type="checkbox" name="category" value="backend"> Backend</label>
+            <label class="job-filters__option"><input type="checkbox" name="category" value="data-ai"> Data &amp; AI</label>
+            <label class="job-filters__option"><input type="checkbox" name="category" value="design"> Design</label>
+            <label class="job-filters__option"><input type="checkbox" name="category" value="devops"> DevOps</label>
+          </fieldset>
+
+          <fieldset class="job-filters__group">
+            <legend class="job-filters__legend">Work type</legend>
+            <label class="job-filters__option"><input type="checkbox" name="workType" value="remote"> Remote</label>
+            <label class="job-filters__option"><input type="checkbox" name="workType" value="hybrid"> Hybrid</label>
+            <label class="job-filters__option"><input type="checkbox" name="workType" value="on-site"> On-site</label>
+          </fieldset>
+
+          <fieldset class="job-filters__group">
+            <legend class="job-filters__legend">Level</legend>
+            <label class="job-filters__option"><input type="checkbox" name="level" value="junior"> Junior</label>
+            <label class="job-filters__option"><input type="checkbox" name="level" value="middle"> Middle</label>
+            <label class="job-filters__option"><input type="checkbox" name="level" value="senior"> Senior</label>
+          </fieldset>
+
+          <div class="job-filters__actions">
+            <button class="job-filters__apply" type="button" disabled>Apply filters</button>
+            <button class="job-filters__reset" type="reset">Clear all</button>
+          </div>
+        </form>
+      </aside>
+
+      <section class="job-results" id="job-results" aria-labelledby="job-results-title">
+        <header class="job-results__header">
+          <h2 class="job-results__title" id="job-results-title">Available jobs</h2>
+        </header>
+
+        <div class="job-results__list">
+          <article class="job-card" aria-labelledby="catalog-job-1-title">
+            <p class="job-card__company">FlowForge</p>
+            <h3 class="job-card__title" id="catalog-job-1-title">Senior Frontend Engineer</h3>
+            <ul class="job-card__tags" aria-label="Job characteristics">
+              <li>Remote</li>
+              <li>Full-time</li>
+              <li>Senior</li>
+            </ul>
+            <p class="job-card__salary">$75,000–$95,000</p>
+          </article>
+          <article class="job-card" aria-labelledby="catalog-job-2-title">
+            <p class="job-card__company">BrightStack</p>
+            <h3 class="job-card__title" id="catalog-job-2-title">Frontend Developer</h3>
+            <ul class="job-card__tags" aria-label="Job characteristics">
+              <li>Remote</li>
+              <li>Full-time</li>
+              <li>Middle</li>
+            </ul>
+            <p class="job-card__salary">$55,000–$75,000</p>
+          </article>
+          <article class="job-card" aria-labelledby="catalog-job-3-title">
+            <p class="job-card__company">TestPilot</p>
+            <h3 class="job-card__title" id="catalog-job-3-title">QA Engineer</h3>
+            <ul class="job-card__tags" aria-label="Job characteristics">
+              <li>Remote</li>
+              <li>Full-time</li>
+              <li>Junior</li>
+            </ul>
+            <p class="job-card__salary">$30,000–$42,000</p>
+          </article>
+          <article class="job-card" aria-labelledby="catalog-job-4-title">
+            <p class="job-card__company">PixelNest</p>
+            <h3 class="job-card__title" id="catalog-job-4-title">Product Designer</h3>
+            <ul class="job-card__tags" aria-label="Job characteristics">
+              <li>Remote</li>
+              <li>Contract</li>
+              <li>Middle</li>
+            </ul>
+            <p class="job-card__salary">$50,000–$70,000</p>
+          </article>
+          <article class="job-card" aria-labelledby="catalog-job-5-title">
+            <p class="job-card__company">CloudSprout</p>
+            <h3 class="job-card__title" id="catalog-job-5-title">Backend Developer</h3>
+            <ul class="job-card__tags" aria-label="Job characteristics">
+              <li>Remote</li>
+              <li>Full-time</li>
+              <li>Senior</li>
+            </ul>
+            <p class="job-card__salary">$70,000–$95,000</p>
+          </article>
+        </div>
+
+        <nav class="pagination" aria-label="Job listing pages">
+          <ol class="pagination__list">
+            <li class="pagination__item"><span aria-current="page">1</span></li>
+            <li class="pagination__item"><span>2</span></li>
+            <li class="pagination__item"><span>3</span></li>
+            <li class="pagination__item"><span>4</span></li>
+            <li class="pagination__item"><span>5</span></li>
+          </ol>
+        </nav>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <section class="site-footer__about" aria-labelledby="footer-title">
+      <h2 class="site-footer__title" id="footer-title">Job Board</h2>
+      <p>The job board for IT startups. Find roles in product teams that move fast.</p>
+    </section>
+    <nav class="site-footer__nav" aria-label="Footer navigation">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./jobs.html">Jobs</a></li>
+        <li><a href="./index.html#startups-hiring">Companies</a></li>
+      </ul>
+    </nav>
+    <section class="site-footer__info" aria-labelledby="footer-info-title">
+      <h2 id="footer-info-title">Find us</h2>
+      <p><small>Educational project: demonstration listings.</small></p>
+    </section>
+  </footer>
+</body>
+</html>
