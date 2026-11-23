@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply for the Senior Frontend Engineer position at FlowForge on Job Board.">
+  <title>Job Board | Apply</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="site-nav__logo" href="./index.html" aria-label="Job Board home">Job Board</a>
+      <ul class="site-nav__list">
+        <li class="site-nav__item"><a href="./index.html">Home</a></li>
+        <li class="site-nav__item"><a href="./jobs.html">Jobs</a></li>
+        <li class="site-nav__item"><a href="./index.html#startups-hiring">Companies</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="apply" id="main-content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="./index.html">Home</a></li>
+        <li class="breadcrumbs__item"><a href="./jobs.html">Jobs Catalog</a></li>
+        <li class="breadcrumbs__item"><a href="./job-details.html">Senior Frontend Engineer</a></li>
+        <li class="breadcrumbs__item" aria-current="page">Application</li>
+      </ol>
+    </nav>
+
+    <header class="apply__header">
+      <h1 class="apply__title">Apply for Senior Frontend Engineer</h1>
+    </header>
+
+    <div class="apply__layout">
+      <section class="application" aria-labelledby="application-title">
+        <h2 class="application__title" id="application-title">Your personal information</h2>
+
+        <form class="application__form" id="application-form" aria-describedby="application-notice">
+          <fieldset class="application__group">
+            <legend class="application__legend">Personal details</legend>
+
+            <div class="application__field">
+              <label class="application__label" for="candidate-name">Full name</label>
+              <input class="application__input" id="candidate-name" name="name" type="text"
+                     autocomplete="name" placeholder="Alex Morgan" required>
+            </div>
+
+            <div class="application__field">
+              <label class="application__label" for="candidate-email">Email</label>
+              <input class="application__input" id="candidate-email" name="email" type="email"
+                     autocomplete="email" placeholder="alex@example.com" required>
+            </div>
+
+            <div class="application__field">
+              <label class="application__label" for="candidate-phone">Phone</label>
+              <input class="application__input" id="candidate-phone" name="phone" type="tel"
+                     autocomplete="tel" placeholder="+1 555 010 1234" required>
+            </div>
+
+            <div class="application__field">
+              <label class="application__label" for="candidate-linkedin">LinkedIn profile link</label>
+              <input class="application__input" id="candidate-linkedin" name="linkedin" type="url"
+                     placeholder="https://www.linkedin.com/in/alexmorgan">
+            </div>
+          </fieldset>
+
+          <fieldset class="application__upload">
+            <legend class="application__legend">Upload CV</legend>
+            <label class="application__label" for="candidate-cv">Choose your CV (PDF, DOC or DOCX)</label>
+            <input class="application__file" id="candidate-cv" name="cv" type="file"
+                   accept=".pdf,.doc,.docx" required>
+          </fieldset>
+
+          <div class="application__consent">
+            <label class="application__consent-label" for="privacy-consent">
+              <input id="privacy-consent" name="privacyConsent" type="checkbox" required>
+              I agree to the processing of my personal data
+            </label>
+          </div>
+
+          <p class="application__notice" id="application-notice">
+            Applications cannot be submitted in this HTML prototype.
+          </p>
+          <button class="application__submit" type="submit" disabled>Submit my application</button>
+        </form>
+      </section>
+
+      <aside class="apply-sidebar" aria-label="Application information">
+        <section class="apply-sidebar__job" aria-labelledby="applying-for-title">
+          <h2 class="apply-sidebar__job-title" id="applying-for-title">Senior Frontend Engineer</h2>
+          <p class="apply-sidebar__company">FlowForge</p>
+          <ul class="apply-sidebar__skills" aria-label="Tech stack">
+            <li>React</li>
+            <li>TypeScript</li>
+            <li>OpenGL</li>
+          </ul>
+          <a class="apply-sidebar__back" href="./job-details.html">Back to job details</a>
+        </section>
+
+        <section class="hiring-process" aria-labelledby="hiring-process-title">
+          <h2 class="hiring-process__title" id="hiring-process-title">What happens next?</h2>
+          <p class="hiring-process__description">Our hiring process</p>
+          <ol class="hiring-process__list">
+            <li class="hiring-process__step">
+              <h3>We review your application</h3>
+              <p>The team checks your CV and details.</p>
+            </li>
+            <li class="hiring-process__step">
+              <h3>Hiring team contacts you</h3>
+              <p>You'll hear from us within a week.</p>
+            </li>
+            <li class="hiring-process__step">
+              <h3>Interview</h3>
+              <p>A short call with an engineering lead.</p>
+            </li>
+          </ol>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <section class="site-footer__about" aria-labelledby="footer-title">
+      <h2 class="site-footer__title" id="footer-title">Job Board</h2>
+      <p>The job board for IT startups. Find roles in product teams that move fast.</p>
+    </section>
+    <nav class="site-footer__nav" aria-label="Footer navigation">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./jobs.html">Jobs</a></li>
+        <li><a href="./index.html#startups-hiring">Companies</a></li>
+      </ul>
+    </nav>
+    <section class="site-footer__info" aria-labelledby="footer-info-title">
+      <h2 id="footer-info-title">Find us</h2>
+      <p><small>Educational project: demonstration listings.</small></p>
+    </section>
+  </footer>
+</body>
+</html>
