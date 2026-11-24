@@ -1,0 +1,10 @@
+<header class="site-header">
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="site-nav__logo" href="./index.html" aria-label="Job Board home">Job Board</a>
+    <ul class="site-nav__list">
+      <li class="site-nav__item"><a href="./index.html"<% if (activePage === 'home') { %> aria-current="page"<% } %>>Home</a></li>
+      <li class="site-nav__item"><a href="./jobs.html"<% if (activePage === 'jobs') { %> aria-current="page"<% } %>>Jobs</a></li>
+      <li class="site-nav__item"><a href="<%= activePage === 'home' ? '#startups-hiring' : './index.html#startups-hiring' %>">Companies</a></li>
+    </ul>
+  </nav>
+</header>

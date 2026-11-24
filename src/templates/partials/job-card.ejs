@@ -1,0 +1,8 @@
+<article class="job-card" aria-labelledby="<%= job.id %>">
+  <p class="job-card__company"><%= job.company %></p>
+  <h3 class="job-card__title" id="<%= job.id %>"><% if (job.href) { %><a href="<%= job.href %>"><%= job.title %></a><% } else { %><%= job.title %><% } %></h3>
+  <ul class="job-card__tags"<% if (job.tagLabel) { %> aria-label="<%= job.tagLabel %>"<% } %>>
+    <% for (const tag of job.tags) { %><li><%= tag %></li><% } %>
+  </ul>
+  <p class="job-card__salary"><%= job.salary %></p>
+</article>

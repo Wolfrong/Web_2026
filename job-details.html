@@ -9,16 +9,7 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header class="site-header">
-    <nav class="site-nav" aria-label="Main navigation">
-      <a class="site-nav__logo" href="./index.html" aria-label="Job Board home">Job Board</a>
-      <ul class="site-nav__list">
-        <li class="site-nav__item"><a href="./index.html">Home</a></li>
-        <li class="site-nav__item"><a href="./jobs.html">Jobs</a></li>
-        <li class="site-nav__item"><a href="./index.html#startups-hiring">Companies</a></li>
-      </ul>
-    </nav>
-  </header>
+  <%- include('./src/templates/partials/header.ejs', { activePage: 'details' }) %>
 
   <main class="job-details" id="main-content">
     <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -115,22 +106,6 @@
     </div>
   </main>
 
-  <footer class="site-footer">
-    <section class="site-footer__about" aria-labelledby="footer-title">
-      <h2 class="site-footer__title" id="footer-title">Job Board</h2>
-      <p>The job board for IT startups. Find roles in product teams that move fast.</p>
-    </section>
-    <nav class="site-footer__nav" aria-label="Footer navigation">
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./jobs.html">Jobs</a></li>
-        <li><a href="./index.html#startups-hiring">Companies</a></li>
-      </ul>
-    </nav>
-    <section class="site-footer__info" aria-labelledby="footer-info-title">
-      <h2 id="footer-info-title">Find us</h2>
-      <p><small>Educational project: demonstration listings.</small></p>
-    </section>
-  </footer>
+  <%- include('./src/templates/partials/footer.ejs', { activePage: 'details' }) %>
 </body>
 </html>

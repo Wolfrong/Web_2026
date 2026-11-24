@@ -9,16 +9,7 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header class="site-header">
-    <nav class="site-nav" aria-label="Main navigation">
-      <a class="site-nav__logo" href="./index.html" aria-label="Job Board home">Job Board</a>
-      <ul class="site-nav__list">
-        <li class="site-nav__item"><a href="./index.html">Home</a></li>
-        <li class="site-nav__item"><a href="./jobs.html" aria-current="page">Jobs</a></li>
-        <li class="site-nav__item"><a href="./index.html#startups-hiring">Companies</a></li>
-      </ul>
-    </nav>
-  </header>
+  <%- include('./src/templates/partials/header.ejs', { activePage: 'jobs' }) %>
 
   <main class="jobs" id="main-content">
     <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -73,56 +64,9 @@
         </header>
 
         <div class="job-results__list">
-          <article class="job-card" aria-labelledby="catalog-job-1-title">
-            <p class="job-card__company">FlowForge</p>
-            <h3 class="job-card__title" id="catalog-job-1-title"><a href="./job-details.html">Senior Frontend Engineer</a></h3>
-            <ul class="job-card__tags" aria-label="Job characteristics">
-              <li>Remote</li>
-              <li>Full-time</li>
-              <li>Senior</li>
-            </ul>
-            <p class="job-card__salary">$75,000–$95,000</p>
-          </article>
-          <article class="job-card" aria-labelledby="catalog-job-2-title">
-            <p class="job-card__company">BrightStack</p>
-            <h3 class="job-card__title" id="catalog-job-2-title">Frontend Developer</h3>
-            <ul class="job-card__tags" aria-label="Job characteristics">
-              <li>Remote</li>
-              <li>Full-time</li>
-              <li>Middle</li>
-            </ul>
-            <p class="job-card__salary">$55,000–$75,000</p>
-          </article>
-          <article class="job-card" aria-labelledby="catalog-job-3-title">
-            <p class="job-card__company">TestPilot</p>
-            <h3 class="job-card__title" id="catalog-job-3-title">QA Engineer</h3>
-            <ul class="job-card__tags" aria-label="Job characteristics">
-              <li>Remote</li>
-              <li>Full-time</li>
-              <li>Junior</li>
-            </ul>
-            <p class="job-card__salary">$30,000–$42,000</p>
-          </article>
-          <article class="job-card" aria-labelledby="catalog-job-4-title">
-            <p class="job-card__company">PixelNest</p>
-            <h3 class="job-card__title" id="catalog-job-4-title">Product Designer</h3>
-            <ul class="job-card__tags" aria-label="Job characteristics">
-              <li>Remote</li>
-              <li>Contract</li>
-              <li>Middle</li>
-            </ul>
-            <p class="job-card__salary">$50,000–$70,000</p>
-          </article>
-          <article class="job-card" aria-labelledby="catalog-job-5-title">
-            <p class="job-card__company">CloudSprout</p>
-            <h3 class="job-card__title" id="catalog-job-5-title">Backend Developer</h3>
-            <ul class="job-card__tags" aria-label="Job characteristics">
-              <li>Remote</li>
-              <li>Full-time</li>
-              <li>Senior</li>
-            </ul>
-            <p class="job-card__salary">$70,000–$95,000</p>
-          </article>
+          <% for (const job of catalogJobs) { %>
+          <%- include('./src/templates/partials/job-card.ejs', { job }) %>
+          <% } %>
         </div>
 
         <nav class="pagination" aria-label="Job listing pages">
@@ -138,22 +82,6 @@
     </div>
   </main>
 
-  <footer class="site-footer">
-    <section class="site-footer__about" aria-labelledby="footer-title">
-      <h2 class="site-footer__title" id="footer-title">Job Board</h2>
-      <p>The job board for IT startups. Find roles in product teams that move fast.</p>
-    </section>
-    <nav class="site-footer__nav" aria-label="Footer navigation">
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./jobs.html">Jobs</a></li>
-        <li><a href="./index.html#startups-hiring">Companies</a></li>
-      </ul>
-    </nav>
-    <section class="site-footer__info" aria-labelledby="footer-info-title">
-      <h2 id="footer-info-title">Find us</h2>
-      <p><small>Educational project: demonstration listings.</small></p>
-    </section>
-  </footer>
+  <%- include('./src/templates/partials/footer.ejs', { activePage: 'jobs' }) %>
 </body>
 </html>

@@ -8,18 +8,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-
-  <header class="site-header">
-    <nav class="site-nav" aria-label="Main navigation">
-      <a class="site-nav__logo" href="./index.html" aria-label="Job Board home">Job Board</a>
-      <ul class="site-nav__list">
-        <li class="site-nav__item"><a href="./index.html" aria-current="page">Home</a></li>
-        <li class="site-nav__item"><a href="./jobs.html">Jobs</a></li>
-        <li class="site-nav__item"><a href="#startups-hiring">Companies</a></li>
-      </ul>
-    </nav>
-  </header>
-
+  <%- include('./src/templates/partials/header.ejs', { activePage: 'home' }) %>
   <main class="home" id="main-content">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__content">
@@ -77,60 +66,9 @@
         <a class="section-heading__link" href="./jobs.html">View All</a>
       </header>
       <div class="latest-jobs__list">
-        <article class="job-card" aria-labelledby="job-1-title">
-          <p class="job-card__company">PixelNest</p>
-          <h3 class="job-card__title" id="job-1-title">Junior Graphic Designer</h3>
-          <ul class="job-card__tags"><li>Remote</li><li>Internship</li><li>Junior</li></ul>
-          <p class="job-card__salary">$20,000–$25,000</p>
-        </article>
-        <article class="job-card" aria-labelledby="job-2-title">
-          <p class="job-card__company">TestPilot</p>
-          <h3 class="job-card__title" id="job-2-title">Frontend Developer</h3>
-          <ul class="job-card__tags"><li>Kyiv, Ukraine</li><li>Full-time</li><li>Middle</li></ul>
-          <p class="job-card__salary">$55,000–$75,000</p>
-        </article>
-        <article class="job-card" aria-labelledby="job-3-title">
-          <p class="job-card__company">FlowForge</p>
-          <h3 class="job-card__title" id="job-3-title">QA Engineer</h3>
-          <ul class="job-card__tags"><li>Remote</li><li>Full-time</li><li>Junior</li></ul>
-          <p class="job-card__salary">$35,000–$50,000</p>
-        </article>
-        <article class="job-card" aria-labelledby="job-4-title">
-          <p class="job-card__company">CloudSprout</p>
-          <h3 class="job-card__title" id="job-4-title">Backend Developer</h3>
-          <ul class="job-card__tags"><li>Warsaw, Poland</li><li>Full-time</li><li>Middle</li></ul>
-          <p class="job-card__salary">$60,000–$85,000</p>
-        </article>
-        <article class="job-card" aria-labelledby="job-5-title">
-          <p class="job-card__company">EPAM Systems</p>
-          <h3 class="job-card__title" id="job-5-title">Product Designer</h3>
-          <ul class="job-card__tags"><li>Remote</li><li>Contract</li><li>Middle</li></ul>
-          <p class="job-card__salary">$50,000–$70,000</p>
-        </article>
-        <article class="job-card" aria-labelledby="job-6-title">
-          <p class="job-card__company">MetricBloom</p>
-          <h3 class="job-card__title" id="job-6-title">Junior UI Designer</h3>
-          <ul class="job-card__tags"><li>Berlin, Germany</li><li>Full-time</li><li>Junior</li></ul>
-          <p class="job-card__salary">$30,000–$42,000</p>
-        </article>
-        <article class="job-card" aria-labelledby="job-7-title">
-          <p class="job-card__company">LaunchLeaf</p>
-          <h3 class="job-card__title" id="job-7-title">Data Analyst</h3>
-          <ul class="job-card__tags"><li>Remote</li><li>Part-time</li><li>Junior</li></ul>
-          <p class="job-card__salary">$25,000–$35,000</p>
-        </article>
-        <article class="job-card" aria-labelledby="job-8-title">
-          <p class="job-card__company">StackHarbor</p>
-          <h3 class="job-card__title" id="job-8-title">Marketing Intern</h3>
-          <ul class="job-card__tags"><li>Tallinn, Estonia</li><li>Internship</li><li>Junior</li></ul>
-          <p class="job-card__salary">$18,000–$24,000</p>
-        </article>
-        <article class="job-card" aria-labelledby="job-9-title">
-          <p class="job-card__company">BrightStack</p>
-          <h3 class="job-card__title" id="job-9-title">DevOps Engineer</h3>
-          <ul class="job-card__tags"><li>Remote</li><li>Full-time</li><li>Senior</li></ul>
-          <p class="job-card__salary">$70,000–$95,000</p>
-        </article>
+        <% for (const job of homeJobs) { %>
+        <%- include('./src/templates/partials/job-card.ejs', { job }) %>
+        <% } %>
       </div>
     </section>
 
@@ -149,22 +87,6 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <section class="site-footer__about" aria-labelledby="footer-title">
-      <h2 class="site-footer__title" id="footer-title">Job Board</h2>
-      <p>The job board for IT startups. Find roles in product teams that move fast.</p>
-    </section>
-    <nav class="site-footer__nav" aria-label="Footer navigation">
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./jobs.html">Jobs</a></li>
-        <li><a href="#startups-hiring">Companies</a></li>
-      </ul>
-    </nav>
-    <section class="site-footer__info" aria-labelledby="footer-info-title">
-      <h2 id="footer-info-title">Find us</h2>
-      <p><small>Educational project: demonstration listings.</small></p>
-    </section>
-  </footer>
+  <%- include('./src/templates/partials/footer.ejs', { activePage: 'home' }) %>
 </body>
 </html>
