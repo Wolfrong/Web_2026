@@ -7,60 +7,60 @@
   <title>Job Board | Jobs</title>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content" data-i18n="common.skipToMain">Skip to main content</a>
 
   <%- include('./src/templates/partials/header.ejs', { activePage: 'jobs' }) %>
 
   <main class="jobs" id="main-content">
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <nav class="breadcrumbs" aria-label="Breadcrumb" data-i18n-aria-label="common.breadcrumbAria">
       <ol class="breadcrumbs__list">
-        <li class="breadcrumbs__item"><a href="./index.html">Home</a></li>
-        <li class="breadcrumbs__item" aria-current="page">Jobs Catalog</li>
+        <li class="breadcrumbs__item"><a href="./index.html" data-i18n="nav.home">Home</a></li>
+        <li class="breadcrumbs__item" aria-current="page" data-i18n="common.jobsCatalog">Jobs Catalog</li>
       </ol>
     </nav>
 
     <header class="jobs__header">
-      <h1 class="jobs__title">Jobs</h1>
+      <h1 class="jobs__title" data-i18n="jobs.title">Jobs</h1>
     </header>
 
     <div class="jobs__layout">
       <aside class="job-filters" aria-labelledby="job-filters-title">
-        <h2 class="job-filters__title" id="job-filters-title">Filters</h2>
+        <h2 class="job-filters__title" id="job-filters-title" data-i18n="jobs.filters.title">Filters</h2>
 
-        <form class="job-filters__form" aria-label="Job filters">
+        <form class="job-filters__form" aria-label="Job filters" data-i18n-aria-label="jobs.filters.aria">
           <fieldset class="job-filters__group">
-            <legend class="job-filters__legend">Category</legend>
-            <label class="job-filters__option"><input type="checkbox" name="category" value="frontend"> Frontend</label>
-            <label class="job-filters__option"><input type="checkbox" name="category" value="backend"> Backend</label>
-            <label class="job-filters__option"><input type="checkbox" name="category" value="data-ai"> Data &amp; AI</label>
-            <label class="job-filters__option"><input type="checkbox" name="category" value="design"> Design</label>
-            <label class="job-filters__option"><input type="checkbox" name="category" value="devops"> DevOps</label>
+            <legend class="job-filters__legend" data-i18n="jobs.filters.category">Category</legend>
+            <label class="job-filters__option"><input type="checkbox" name="category" value="frontend"> <span data-i18n="jobs.filters.values.frontend">Frontend</span></label>
+            <label class="job-filters__option"><input type="checkbox" name="category" value="backend"> <span data-i18n="jobs.filters.values.backend">Backend</span></label>
+            <label class="job-filters__option"><input type="checkbox" name="category" value="data-ai"> <span data-i18n="jobs.filters.values.dataAi">Data &amp; AI</span></label>
+            <label class="job-filters__option"><input type="checkbox" name="category" value="design"> <span data-i18n="jobs.filters.values.design">Design</span></label>
+            <label class="job-filters__option"><input type="checkbox" name="category" value="devops"> <span data-i18n="jobs.filters.values.devops">DevOps</span></label>
           </fieldset>
 
           <fieldset class="job-filters__group">
-            <legend class="job-filters__legend">Work type</legend>
-            <label class="job-filters__option"><input type="checkbox" name="workType" value="remote"> Remote</label>
-            <label class="job-filters__option"><input type="checkbox" name="workType" value="hybrid"> Hybrid</label>
-            <label class="job-filters__option"><input type="checkbox" name="workType" value="on-site"> On-site</label>
+            <legend class="job-filters__legend" data-i18n="jobs.filters.workType">Work type</legend>
+            <label class="job-filters__option"><input type="checkbox" name="workType" value="remote"> <span data-i18n="jobs.filters.values.remote">Remote</span></label>
+            <label class="job-filters__option"><input type="checkbox" name="workType" value="hybrid"> <span data-i18n="jobs.filters.values.hybrid">Hybrid</span></label>
+            <label class="job-filters__option"><input type="checkbox" name="workType" value="on-site"> <span data-i18n="jobs.filters.values.onsite">On-site</span></label>
           </fieldset>
 
           <fieldset class="job-filters__group">
-            <legend class="job-filters__legend">Level</legend>
-            <label class="job-filters__option"><input type="checkbox" name="level" value="junior"> Junior</label>
-            <label class="job-filters__option"><input type="checkbox" name="level" value="middle"> Middle</label>
-            <label class="job-filters__option"><input type="checkbox" name="level" value="senior"> Senior</label>
+            <legend class="job-filters__legend" data-i18n="jobs.filters.level">Level</legend>
+            <label class="job-filters__option"><input type="checkbox" name="level" value="junior"> <span data-i18n="jobs.filters.values.junior">Junior</span></label>
+            <label class="job-filters__option"><input type="checkbox" name="level" value="middle"> <span data-i18n="jobs.filters.values.middle">Middle</span></label>
+            <label class="job-filters__option"><input type="checkbox" name="level" value="senior"> <span data-i18n="jobs.filters.values.senior">Senior</span></label>
           </fieldset>
 
           <div class="job-filters__actions">
-            <button class="job-filters__apply" type="button" disabled>Apply filters</button>
-            <button class="job-filters__reset" type="reset">Clear all</button>
+            <button class="job-filters__apply" type="button" disabled data-i18n="jobs.filters.apply">Apply filters</button>
+            <button class="job-filters__reset" type="reset" data-i18n="jobs.filters.clear">Clear all</button>
           </div>
         </form>
       </aside>
 
       <section class="job-results" id="job-results" aria-labelledby="job-results-title">
         <header class="job-results__header">
-          <h2 class="job-results__title" id="job-results-title">Available jobs</h2>
+          <h2 class="job-results__title" id="job-results-title" data-i18n="jobs.results.title">Available jobs</h2>
         </header>
 
         <div class="job-results__list">
@@ -69,7 +69,7 @@
           <% } %>
         </div>
 
-        <nav class="pagination" aria-label="Job listing pages">
+        <nav class="pagination" aria-label="Job listing pages" data-i18n-aria-label="jobs.pagination.aria">
           <ol class="pagination__list">
             <li class="pagination__item"><span aria-current="page">1</span></li>
             <li class="pagination__item"><span>2</span></li>

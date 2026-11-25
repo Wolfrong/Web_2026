@@ -7,60 +7,60 @@
   <title>Job Board | Apply</title>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content" data-i18n="common.skipToMain">Skip to main content</a>
 
   <%- include('./src/templates/partials/header.ejs', { activePage: 'apply' }) %>
 
   <main class="apply" id="main-content">
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <nav class="breadcrumbs" aria-label="Breadcrumb" data-i18n-aria-label="common.breadcrumbAria">
       <ol class="breadcrumbs__list">
-        <li class="breadcrumbs__item"><a href="./index.html">Home</a></li>
-        <li class="breadcrumbs__item"><a href="./jobs.html">Jobs Catalog</a></li>
-        <li class="breadcrumbs__item"><a href="./job-details.html">Senior Frontend Engineer</a></li>
-        <li class="breadcrumbs__item" aria-current="page">Application</li>
+        <li class="breadcrumbs__item"><a href="./index.html" data-i18n="nav.home">Home</a></li>
+        <li class="breadcrumbs__item"><a href="./jobs.html" data-i18n="common.jobsCatalog">Jobs Catalog</a></li>
+        <li class="breadcrumbs__item"><a href="./job-details.html" data-i18n="details.title">Senior Frontend Engineer</a></li>
+        <li class="breadcrumbs__item" aria-current="page" data-i18n="apply.breadcrumb">Application</li>
       </ol>
     </nav>
 
     <header class="apply__header">
-      <h1 class="apply__title">Apply for Senior Frontend Engineer</h1>
+      <h1 class="apply__title" data-i18n="apply.title">Apply for Senior Frontend Engineer</h1>
     </header>
 
     <div class="apply__layout">
       <section class="application" aria-labelledby="application-title">
-        <h2 class="application__title" id="application-title">Your personal information</h2>
+        <h2 class="application__title" id="application-title" data-i18n="apply.personalInformation">Your personal information</h2>
 
         <form class="application__form" id="application-form" aria-describedby="application-notice">
           <fieldset class="application__group">
-            <legend class="application__legend">Personal details</legend>
+            <legend class="application__legend" data-i18n="apply.form.personalDetails">Personal details</legend>
 
             <div class="application__field">
-              <label class="application__label" for="candidate-name">Full name</label>
+              <label class="application__label" for="candidate-name" data-i18n="apply.form.fullName">Full name</label>
               <input class="application__input" id="candidate-name" name="name" type="text"
                      autocomplete="name" placeholder="Alex Morgan" required>
             </div>
 
             <div class="application__field">
-              <label class="application__label" for="candidate-email">Email</label>
+              <label class="application__label" for="candidate-email" data-i18n="apply.form.email">Email</label>
               <input class="application__input" id="candidate-email" name="email" type="email"
                      autocomplete="email" placeholder="alex@example.com" required>
             </div>
 
             <div class="application__field">
-              <label class="application__label" for="candidate-phone">Phone</label>
+              <label class="application__label" for="candidate-phone" data-i18n="apply.form.phone">Phone</label>
               <input class="application__input" id="candidate-phone" name="phone" type="tel"
                      autocomplete="tel" placeholder="+1 555 010 1234" required>
             </div>
 
             <div class="application__field">
-              <label class="application__label" for="candidate-linkedin">LinkedIn profile link</label>
+              <label class="application__label" for="candidate-linkedin" data-i18n="apply.form.linkedin">LinkedIn profile link</label>
               <input class="application__input" id="candidate-linkedin" name="linkedin" type="url"
                      placeholder="https://www.linkedin.com/in/alexmorgan">
             </div>
           </fieldset>
 
           <fieldset class="application__upload">
-            <legend class="application__legend">Upload CV</legend>
-            <label class="application__label" for="candidate-cv">Choose your CV (PDF, DOC or DOCX)</label>
+            <legend class="application__legend" data-i18n="apply.form.uploadCv">Upload CV</legend>
+            <label class="application__label" for="candidate-cv" data-i18n="apply.form.cvHelp">Choose your CV (PDF, DOC or DOCX)</label>
             <input class="application__file" id="candidate-cv" name="cv" type="file"
                    accept=".pdf,.doc,.docx" required>
           </fieldset>
@@ -68,44 +68,44 @@
           <div class="application__consent">
             <label class="application__consent-label" for="privacy-consent">
               <input id="privacy-consent" name="privacyConsent" type="checkbox" required>
-              I agree to the processing of my personal data
+              <span data-i18n="apply.form.privacyConsent">I agree to the processing of my personal data</span>
             </label>
           </div>
 
-          <p class="application__notice" id="application-notice">
+          <p class="application__notice" id="application-notice" data-i18n="apply.form.notice">
             Applications cannot be submitted in this HTML prototype.
           </p>
-          <button class="application__submit" type="submit" disabled>Submit my application</button>
+          <button class="application__submit" type="submit" disabled data-i18n="apply.form.submit">Submit my application</button>
         </form>
       </section>
 
-      <aside class="apply-sidebar" aria-label="Application information">
+      <aside class="apply-sidebar" aria-label="Application information" data-i18n-aria-label="apply.sidebar.aria">
         <section class="apply-sidebar__job" aria-labelledby="applying-for-title">
-          <h2 class="apply-sidebar__job-title" id="applying-for-title">Senior Frontend Engineer</h2>
+          <h2 class="apply-sidebar__job-title" id="applying-for-title" data-i18n="details.title">Senior Frontend Engineer</h2>
           <p class="apply-sidebar__company">FlowForge</p>
-          <ul class="apply-sidebar__skills" aria-label="Tech stack">
+          <ul class="apply-sidebar__skills" aria-label="Tech stack" data-i18n-aria-label="jobs.techStack">
             <li>React</li>
             <li>TypeScript</li>
             <li>OpenGL</li>
           </ul>
-          <a class="apply-sidebar__back" href="./job-details.html">Back to job details</a>
+          <a class="apply-sidebar__back" href="./job-details.html" data-i18n="apply.backToDetails">Back to job details</a>
         </section>
 
         <section class="hiring-process" aria-labelledby="hiring-process-title">
-          <h2 class="hiring-process__title" id="hiring-process-title">What happens next?</h2>
-          <p class="hiring-process__description">Our hiring process</p>
+          <h2 class="hiring-process__title" id="hiring-process-title" data-i18n="apply.nextSteps.title">What happens next?</h2>
+          <p class="hiring-process__description" data-i18n="apply.nextSteps.description">Our hiring process</p>
           <ol class="hiring-process__list">
             <li class="hiring-process__step">
-              <h3>We review your application</h3>
-              <p>The team checks your CV and details.</p>
+              <h3 data-i18n="apply.nextSteps.reviewTitle">We review your application</h3>
+              <p data-i18n="apply.nextSteps.reviewDescription">The team checks your CV and details.</p>
             </li>
             <li class="hiring-process__step">
-              <h3>Hiring team contacts you</h3>
-              <p>You'll hear from us within a week.</p>
+              <h3 data-i18n="apply.nextSteps.contactTitle">Hiring team contacts you</h3>
+              <p data-i18n="apply.nextSteps.contactDescription">You'll hear from us within a week.</p>
             </li>
             <li class="hiring-process__step">
-              <h3>Interview</h3>
-              <p>A short call with an engineering lead.</p>
+              <h3 data-i18n="apply.nextSteps.interviewTitle">Interview</h3>
+              <p data-i18n="apply.nextSteps.interviewDescription">A short call with an engineering lead.</p>
             </li>
           </ol>
         </section>

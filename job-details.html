@@ -33,41 +33,41 @@
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content" data-i18n="common.skipToMain">Skip to main content</a>
 
   <%- include('./src/templates/partials/header.ejs', { activePage: 'details' }) %>
 
   <main class="job-details" id="main-content">
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <nav class="breadcrumbs" aria-label="Breadcrumb" data-i18n-aria-label="common.breadcrumbAria">
       <ol class="breadcrumbs__list">
-        <li class="breadcrumbs__item"><a href="./index.html">Home</a></li>
-        <li class="breadcrumbs__item"><a href="./jobs.html">Jobs Catalog</a></li>
-        <li class="breadcrumbs__item" aria-current="page">Senior Frontend Engineer</li>
+        <li class="breadcrumbs__item"><a href="./index.html" data-i18n="nav.home">Home</a></li>
+        <li class="breadcrumbs__item"><a href="./jobs.html" data-i18n="common.jobsCatalog">Jobs Catalog</a></li>
+        <li class="breadcrumbs__item" aria-current="page" data-i18n="details.title">Senior Frontend Engineer</li>
       </ol>
     </nav>
 
     <div class="job-details__layout">
       <article class="job-detail" aria-labelledby="job-detail-title">
         <header class="job-detail__header">
-          <h1 class="job-detail__title" id="job-detail-title">Senior Frontend Engineer</h1>
+          <h1 class="job-detail__title" id="job-detail-title" data-i18n="details.title">Senior Frontend Engineer</h1>
           <p class="job-detail__company">FlowForge</p>
-          <ul class="job-detail__meta" aria-label="Job characteristics">
-            <li>Remote</li>
-            <li>Full-time</li>
-            <li>Senior</li>
+          <ul class="job-detail__meta" aria-label="Job characteristics" data-i18n-aria-label="jobs.jobCharacteristics">
+            <li data-i18n="jobs.values.remote">Remote</li>
+            <li data-i18n="jobs.values.fullTime">Full-time</li>
+            <li data-i18n="jobs.values.senior">Senior</li>
           </ul>
-          <p class="job-detail__posted">Posted 2 days ago</p>
-          <ul class="job-detail__skills" aria-label="Tech stack">
+          <p class="job-detail__posted" data-i18n="details.posted">Posted 2 days ago</p>
+          <ul class="job-detail__skills" aria-label="Tech stack" data-i18n-aria-label="jobs.techStack">
             <li>React</li>
             <li>TypeScript</li>
             <li>OpenGL</li>
           </ul>
-          <a class="job-detail__apply" href="./apply.html">Apply now</a>
+          <a class="job-detail__apply" href="./apply.html" data-i18n="common.applyNow">Apply now</a>
         </header>
 
         <section class="job-detail__section" aria-labelledby="about-role-title">
-          <h2 id="about-role-title">About the role</h2>
-          <p>
+          <h2 id="about-role-title" data-i18n="details.sections.about.title">About the role</h2>
+          <p data-i18n="details.sections.about.description">
             FlowForge builds developer tools for cloud teams. We are looking for a senior engineer
             to lead the web app that thousands of engineers use every day. You will work with
             product and design from idea to release.
@@ -75,59 +75,59 @@
         </section>
 
         <section class="job-detail__section" aria-labelledby="responsibilities-title">
-          <h2 id="responsibilities-title">Responsibilities</h2>
+          <h2 id="responsibilities-title" data-i18n="details.sections.responsibilities.title">Responsibilities</h2>
           <ul>
-            <li>Build and maintain the main React application</li>
-            <li>Review code and mentor middle-level engineers</li>
-            <li>Improve performance and accessibility</li>
-            <li>Work closely with designers on new features</li>
+            <li data-i18n="details.sections.responsibilities.buildReact">Build and maintain the main React application</li>
+            <li data-i18n="details.sections.responsibilities.mentor">Review code and mentor middle-level engineers</li>
+            <li data-i18n="details.sections.responsibilities.performance">Improve performance and accessibility</li>
+            <li data-i18n="details.sections.responsibilities.designers">Work closely with designers on new features</li>
           </ul>
         </section>
 
         <section class="job-detail__section" aria-labelledby="requirements-title">
-          <h2 id="requirements-title">Requirements</h2>
+          <h2 id="requirements-title" data-i18n="details.sections.requirements.title">Requirements</h2>
           <ul>
-            <li>5+ years of experience in frontend development</li>
-            <li>Strong knowledge of React and TypeScript</li>
-            <li>Experience with REST or GraphQL APIs</li>
-            <li>Good written English</li>
+            <li data-i18n="details.sections.requirements.experience">5+ years of experience in frontend development</li>
+            <li data-i18n="details.sections.requirements.reactTypeScript">Strong knowledge of React and TypeScript</li>
+            <li data-i18n="details.sections.requirements.apis">Experience with REST or GraphQL APIs</li>
+            <li data-i18n="details.sections.requirements.english">Good written English</li>
           </ul>
         </section>
 
         <section class="job-detail__section" aria-labelledby="nice-to-have-title">
-          <h2 id="nice-to-have-title">Nice to have</h2>
+          <h2 id="nice-to-have-title" data-i18n="details.sections.niceToHave.title">Nice to have</h2>
           <ul>
-            <li>Experience with design systems</li>
-            <li>Testing with Cypress or Playwright</li>
+            <li data-i18n="details.sections.niceToHave.designSystems">Experience with design systems</li>
+            <li data-i18n="details.sections.niceToHave.testing">Testing with Cypress or Playwright</li>
           </ul>
         </section>
 
         <section class="job-detail__section" aria-labelledby="benefits-title">
-          <h2 id="benefits-title">Benefits</h2>
+          <h2 id="benefits-title" data-i18n="details.sections.benefits.title">Benefits</h2>
           <ul>
-            <li>Equity options</li>
-            <li>Flexible hours</li>
-            <li>Learning budget</li>
-            <li>30 days off</li>
+            <li data-i18n="details.sections.benefits.equity">Equity options</li>
+            <li data-i18n="details.sections.benefits.flexibleHours">Flexible hours</li>
+            <li data-i18n="details.sections.benefits.learningBudget">Learning budget</li>
+            <li data-i18n="details.sections.benefits.daysOff">30 days off</li>
           </ul>
         </section>
       </article>
 
       <aside class="job-overview" aria-labelledby="job-overview-title">
-        <h2 class="job-overview__title" id="job-overview-title">Job Overview</h2>
+        <h2 class="job-overview__title" id="job-overview-title" data-i18n="details.overview.title">Job Overview</h2>
         <p class="job-overview__salary">$75,000–$95,000</p>
-        <p class="job-overview__salary-note">Per year before taxes</p>
+        <p class="job-overview__salary-note" data-i18n="details.overview.salaryNote">Per year before taxes</p>
         <dl class="job-overview__details">
-          <dt>Location</dt>
-          <dd>Remote</dd>
-          <dt>Type</dt>
-          <dd>Full-time</dd>
-          <dt>Level</dt>
-          <dd>Senior</dd>
-          <dt>Applicants</dt>
+          <dt data-i18n="details.overview.location">Location</dt>
+          <dd data-i18n="jobs.values.remote">Remote</dd>
+          <dt data-i18n="details.overview.type">Type</dt>
+          <dd data-i18n="jobs.values.fullTime">Full-time</dd>
+          <dt data-i18n="details.overview.level">Level</dt>
+          <dd data-i18n="jobs.values.senior">Senior</dd>
+          <dt data-i18n="details.overview.applicants">Applicants</dt>
           <dd>18</dd>
         </dl>
-        <a class="job-overview__apply" href="./apply.html">Apply now</a>
+        <a class="job-overview__apply" href="./apply.html" data-i18n="common.applyNow">Apply now</a>
       </aside>
     </div>
   </main>

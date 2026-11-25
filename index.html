@@ -7,21 +7,23 @@
   <title>Job Board | Home</title>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content" data-i18n="common.skipToMain">Skip to main content</a>
+
   <%- include('./src/templates/partials/header.ejs', { activePage: 'home' }) %>
+
   <main class="home" id="main-content">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__content">
-        <h1 class="hero__title" id="hero-title">Find your next job at an IT startup</h1>
-        <p class="hero__description">
+        <h1 class="hero__title" id="hero-title" data-i18n="home.hero.title">Find your next job at an IT startup</h1>
+        <p class="hero__description" data-i18n="home.hero.description">
           Discover roles at IT startups. Find your next opportunity in design,
           engineering, and product.
         </p>
         <form class="hero__search" action="./jobs.html" method="get" role="search">
-          <label class="hero__label" for="job-keyword">Job title or keyword</label>
+          <label class="hero__label" for="job-keyword" data-i18n="home.search.label">Job title or keyword</label>
           <input class="hero__input" id="job-keyword" name="q" type="search"
-                 placeholder="Search jobs">
-          <button class="hero__button" type="submit">Start searching</button>
+                 placeholder="Search jobs" data-i18n-placeholder="home.search.placeholder">
+          <button class="hero__button" type="submit" data-i18n="home.search.submit">Start searching</button>
         </form>
       </div>
       <picture class="hero__picture">
@@ -33,37 +35,37 @@
              srcset="./images/illustration-446.webp 446w, ./images/illustration-892.webp 892w"
              sizes="(max-width: 768px) 100vw, 446px"
              width="446" height="346"
-             alt="Person working on a laptop at a desk">
+             alt="Person working on a laptop at a desk" data-i18n-alt="home.hero.imageAlt">
       </picture>
     </section>
 
     <section class="categories" id="categories" aria-labelledby="categories-title">
       <header class="section-heading">
-        <h2 class="section-heading__title" id="categories-title">Popular category</h2>
-        <a class="section-heading__link" href="./jobs.html">View All</a>
+        <h2 class="section-heading__title" id="categories-title" data-i18n="home.categories.title">Popular category</h2>
+        <a class="section-heading__link" href="./jobs.html" data-i18n="common.viewAll">View All</a>
       </header>
       <ul class="categories__list">
-        <li class="categories__item"><a href="./jobs.html">Music &amp; Audio</a><span>350 Open positions</span></li>
-        <li class="categories__item"><a href="./jobs.html">Finance</a><span>170 Open positions</span></li>
-        <li class="categories__item"><a href="./jobs.html">Data Science</a><span>57 Open positions</span></li>
-        <li class="categories__item"><a href="./jobs.html">Social</a><span>112 Open positions</span></li>
-        <li class="categories__item"><a href="./jobs.html">Design</a><span>357 Open positions</span></li>
-        <li class="categories__item"><a href="./jobs.html">Programming</a><span>312 Open positions</span></li>
-        <li class="categories__item"><a href="./jobs.html">Marketing</a><span>112 Open positions</span></li>
-        <li class="categories__item"><a href="./jobs.html">Animation</a><span>101 Open positions</span></li>
+        <li class="categories__item"><a href="./jobs.html" data-i18n="home.categories.musicAudio">Music &amp; Audio</a><span>350 Open positions</span></li>
+        <li class="categories__item"><a href="./jobs.html" data-i18n="home.categories.finance">Finance</a><span>170 Open positions</span></li>
+        <li class="categories__item"><a href="./jobs.html" data-i18n="home.categories.dataScience">Data Science</a><span>57 Open positions</span></li>
+        <li class="categories__item"><a href="./jobs.html" data-i18n="home.categories.social">Social</a><span>112 Open positions</span></li>
+        <li class="categories__item"><a href="./jobs.html" data-i18n="home.categories.design">Design</a><span>357 Open positions</span></li>
+        <li class="categories__item"><a href="./jobs.html" data-i18n="home.categories.programming">Programming</a><span>312 Open positions</span></li>
+        <li class="categories__item"><a href="./jobs.html" data-i18n="home.categories.marketing">Marketing</a><span>112 Open positions</span></li>
+        <li class="categories__item"><a href="./jobs.html" data-i18n="home.categories.animation">Animation</a><span>101 Open positions</span></li>
       </ul>
     </section>
 
     <aside class="job-banner" aria-labelledby="job-banner-title">
-      <h2 class="job-banner__title" id="job-banner-title">Looking for a job in a startup?</h2>
-      <p class="job-banner__description">Apply for a job in 5 minutes and reach the IT realms.</p>
-      <a class="job-banner__link" href="./jobs.html">Find job</a>
+      <h2 class="job-banner__title" id="job-banner-title" data-i18n="home.banner.title">Looking for a job in a startup?</h2>
+      <p class="job-banner__description" data-i18n="home.banner.description">Apply for a job in 5 minutes and reach the IT realms.</p>
+      <a class="job-banner__link" href="./jobs.html" data-i18n="home.banner.findJob">Find job</a>
     </aside>
 
     <section class="latest-jobs" id="latest-jobs" aria-labelledby="latest-jobs-title">
       <header class="section-heading">
-        <h2 class="section-heading__title" id="latest-jobs-title">Latest jobs</h2>
-        <a class="section-heading__link" href="./jobs.html">View All</a>
+        <h2 class="section-heading__title" id="latest-jobs-title" data-i18n="home.latestJobs.title">Latest jobs</h2>
+        <a class="section-heading__link" href="./jobs.html" data-i18n="common.viewAll">View All</a>
       </header>
       <div class="latest-jobs__list">
         <% for (const job of homeJobs) { %>
@@ -74,8 +76,8 @@
 
     <section class="startups" id="startups-hiring" aria-labelledby="startups-title">
       <header class="section-heading">
-        <h2 class="section-heading__title" id="startups-title">Startups hiring</h2>
-        <a class="section-heading__link" href="#startups-hiring">View All</a>
+        <h2 class="section-heading__title" id="startups-title" data-i18n="home.startups.title">Startups hiring</h2>
+        <a class="section-heading__link" href="#startups-hiring" data-i18n="common.viewAll">View All</a>
       </header>
       <ul class="startups__list">
         <li class="startups__item"><article><h3>PixelNest</h3><p>12 Open positions</p></article></li>

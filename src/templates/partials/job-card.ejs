@@ -1,6 +1,6 @@
 <article class="job-card" aria-labelledby="<%= job.id %>">
   <p class="job-card__company"><%= job.company %></p>
-  <h3 class="job-card__title" id="<%= job.id %>"><% if (job.href) { %><a href="<%= job.href %>"><%= job.title %></a><% } else { %><%= job.title %><% } %></h3>
+  <h3 class="job-card__title" id="<%= job.id %>"><% if (job.href) { %><a href="<%= job.href %>" data-i18n="jobs.listings.<%= job.id %>.title"><%= job.title %></a><% } else { %><span data-i18n="jobs.listings.<%= job.id %>.title"><%= job.title %></span><% } %></h3>
   <ul class="job-card__tags"<% if (job.tagLabel) { %> aria-label="<%= job.tagLabel %>"<% } %>>
     <% for (const tag of job.tags) { %><li><%= tag %></li><% } %>
   </ul>
