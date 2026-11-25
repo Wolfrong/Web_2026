@@ -29,7 +29,8 @@ function renderEjsPages() {
   };
 }
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  base: command === "build" ? "/Web_2026/" : "/",
   plugins: [renderEjsPages()],
   server: { port: 5173, open: true },
   preview: { port: 4173 },
@@ -46,4 +47,4 @@ export default defineConfig({
       }
     }
   }
-});
+}));
